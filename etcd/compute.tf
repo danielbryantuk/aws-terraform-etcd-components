@@ -1,4 +1,4 @@
-data "aws_ami" "ubuntu" {
+/*data "aws_ami" "ubuntu" {
   most_recent = true
 
   filter {
@@ -47,4 +47,5 @@ resource "aws_instance" "jump_box" {
     Name  = "${var.env}-jump-box"
     Owner = "${var.owner}"
   }
-}
+}*/
+

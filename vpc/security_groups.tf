@@ -125,10 +125,10 @@ resource "aws_security_group" "jump_box" {
 }
 
 resource "aws_security_group_rule" "allow_external_jump_box_ssh_ingress" {
-  type                     = "ingress"
-  from_port                = 22
-  to_port                  = 22
-  protocol                 = "tcp"
+  type        = "ingress"
+  from_port   = 22
+  to_port     = 22
+  protocol    = "tcp"
   cidr_blocks = ["${var.current_location_cidr}"]
 
   security_group_id = "${aws_security_group.jump_box.id}"
